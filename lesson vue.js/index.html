@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello vue</title>
+</head>
+<body>
+    <div id="app">
+        <div class="wrapper">
+            <div class="input_container">
+                <input v-model="inputText" id="name" class="name" type="text">
+                <button id="btn" class="btn" @click="onClickAdd">追加</button>
+             </div>
+            <ul id="list">
+                <li v-for="(title, index) in array" class="list_content">
+                    <button @click="onClickDelete(index)" class="close_button">X </button> 
+                    <p class="list_item_title">{{ title }}</p>
+                </li>
+                <!-- <li id="list_name" class="list_content" > 
+                    <button class="close_button">X </button> 
+                    <p class="list_item_title">Apple</p>
+                </li>
+                
+                <li id="list_name" class="list_content" > 
+                    <button class="close_button">X </button> 
+                    <p class="list_item_title">Grape</p>
+                </li>
+                <li id="list_name" class="list_content" > 
+                    <button class="close_button">X </button> 
+                    <p class="list_item_title">Strawberry</p>
+                </li> -->
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="/app.js"></script>
+</body>

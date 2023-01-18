@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css"> 
+    </head>
+    <body>
+        <div id="app">
+           <div class="wrapper">
+               <div class="container">
+                    <ul>
+                        <li v-for="(item, index) in leftList" @click="onClickItem(item)">{{item}}</li>
+                        
+                    </ul>
+                    <button class="move-button" @click="onClickMove(0)">右へ移動</button>
+               </div>
+               <div class="container">
+                    <ul>
+                        <li v-for="(item, index) in rightList" @click="onClickItem(item)">{{item}}</li>
+                        
+        
+                    </ul>
+                    <button class="move-button" @click="onClickMove(1)">左へ移動</button>
+                </div>
+           </div> 
+        </div>
+    
+    </body>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <script src="/app.js"></script>
+</html>
